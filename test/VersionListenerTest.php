@@ -18,6 +18,9 @@ class VersionListenerTest extends TestCase
     use ProphecyTrait;
     use RouteMatchFactoryTrait;
 
+    private MvcEvent $event;
+    private VersionListener $listener;
+
     public function setUp(): void
     {
         $this->event = new MvcEvent();

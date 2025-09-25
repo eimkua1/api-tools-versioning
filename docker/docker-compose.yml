@@ -1,0 +1,30 @@
+version: '2.2'
+services:
+    php-cli-8.4:
+        init: true
+        build: ./php-8.4
+        command: php -r "while (true) { sleep(86400); }"
+        working_dir: /application
+        volumes:
+            - ../../api-tools-versioning:/application:rw
+    php-cli-8.3:
+        init: true
+        build: ./php-8.3
+        command: php -r "while (true) { sleep(86400); }"
+        working_dir: /application
+        volumes:
+            - ../../api-tools-versioning:/application:rw
+    php-cli-8.2:
+        init: true
+        build: ./php-8.2
+        command: php -r "while (true) { sleep(86400); }"
+        working_dir: /application
+        volumes:
+            - ../../api-tools-versioning:/application:rw
+    php-cli-8.1:
+        init: true
+        build: ./php-8.1
+        command: php -r "while (true) { sleep(86400); }"
+        working_dir: /application
+        volumes:
+            - ../../api-tools-versioning:/application:rw

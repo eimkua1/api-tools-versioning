@@ -129,7 +129,6 @@ class ContentTypeListener implements ListenerAggregateInterface
      * Inject regex matches into the route matches
      *
      * @param RouteMatch|V2RouteMatch $routeMatches
-     * @param array $matches
      */
     protected function injectRouteMatches($routeMatches, array $matches): void
     {

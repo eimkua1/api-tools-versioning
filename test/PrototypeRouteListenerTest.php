@@ -15,6 +15,10 @@ use function var_export;
 
 class PrototypeRouteListenerTest extends TestCase
 {
+    private array $config;
+    private ConfigListener $configListener;
+    private ModuleEvent $event;
+
     public function setUp(): void
     {
         $this->config         = [
@@ -69,7 +73,6 @@ class PrototypeRouteListenerTest extends TestCase
 
     /**
      * @dataProvider routesWithoutPrototype
-     * @param array $routes
      */
     public function testEmptyConfigurationDoesNotInjectPrototypes(array $routes): void
     {

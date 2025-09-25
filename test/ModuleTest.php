@@ -24,6 +24,11 @@ class ModuleTest extends TestCase
 {
     use EventListenerIntrospectionTrait;
 
+    private TestAsset\Application $app;
+    private ServiceManager $services;
+    private EventManager $events;
+    private Module $module;
+
     public function setUp(): void
     {
         $this->app      = new TestAsset\Application();
